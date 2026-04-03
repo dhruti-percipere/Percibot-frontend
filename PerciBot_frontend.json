@@ -3,9 +3,9 @@
   "license": "",
   "vendor": "Percipere",
   "id": "com.percipere.sac.percibot.dev",
-  "version": "1.1.0",
-  "name": "PerciBOT_Tata_Chemicals",
-  "newInstancePrefix": "PerciBOT_Tata_Chemicals",
+  "version": "1.0.0",
+  "name": "PerciBOT_TC",
+  "newInstancePrefix": "PerciBOT_TC",
   "description": "PerciBot SAC custom widget with chat, builder configuration, prompts, connection testing, and theming support",
   "webcomponents": [
     {
