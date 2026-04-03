@@ -11,14 +11,14 @@
     {
       "kind": "main",
       "tag": "perci-bot",
-      "url": "https://dhruti-percipere.github.io/Percibot-frontend/src/chat-widget.js",
+      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/chat-widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "perci-bot-builder",
-      "url": "https://dhruti-percipere.github.io/Percibot-frontend/src/builder.js",
+      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/builder.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
