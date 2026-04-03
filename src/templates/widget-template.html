@@ -1,0 +1,71 @@
+<div class="wrap">
+  <header>
+    <div class="brand">PerciBOT</div>
+
+    <div class="headerRight">
+      <button class="modeToggle analytical" id="modeToggle" type="button" aria-label="Toggle mode">
+        <span class="modeDot"></span>
+        <span class="modeText">Analytical Mode</span>
+      </button>
+
+      <div class="chip" id="modelChip">AI Assistant</div>
+    </div>
+
+    <div id="dsDrawer"></div>
+  </header>
+
+  <div class="body">
+    <div class="panel" id="chat"></div>
+
+    <div class="cWrap">
+      <div class="popover" id="popover">
+        <div class="popItem" id="popAttach">
+          <span class="js-icon-clip"></span>
+          <span class="popLabel">Add files</span>
+        </div>
+        <div class="popItem" id="popWS">
+          <span class="js-icon-globe"></span>
+          <span class="popLabel">Web search</span>
+          <span class="popTick"></span>
+        </div>
+      </div>
+
+      <div class="composer">
+        <div class="shimRow" id="shimRow">
+          <div class="shimBox"></div>
+          <span class="shimTxt">Attaching image…</span>
+        </div>
+
+        <div class="pills" id="pills"></div>
+
+        <div class="inputRow">
+          <button class="btnPlus" id="btnPlus" title="Add attachment or enable tools">
+            <span class="js-icon-plus"></span>
+          </button>
+
+          <textarea id="input" rows="1" placeholder="Ask anything about your analytics…"></textarea>
+
+          <button class="btnSend" id="btnSend" disabled title="Send  (Ctrl+Enter)">
+            <span class="js-icon-send"></span>
+          </button>
+
+          <button class="btnClear" id="btnClear" title="Clear chat">
+            <span class="js-icon-clear"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none" aria-hidden="true" />
+
+  <div class="lightbox" id="lb">
+    <button class="lbX" id="lbX">&#x2715;</button>
+    <img id="lbImg" src="" alt="Preview" />
+  </div>
+
+  <div class="footer">
+    <span>AI can make mistakes. Please verify results.</span>
+    <span><a href="https://www.linkedin.com/company/percipere/" target="_blank" rel="noopener">Percipere Consulting</a></span>
+  </div>
+</div>

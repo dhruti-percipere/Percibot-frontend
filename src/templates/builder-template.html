@@ -1,0 +1,127 @@
+<div class="panel">
+  <div class="section">
+    <div class="title">Connection</div>
+
+    <div class="f keywrap" style="margin-bottom:12px">
+      <label>OpenAI API Key</label>
+      <input id="apiKey" type="password" placeholder="sk-..." />
+      <button class="reveal" id="toggleKey" tabindex="-1">Show</button>
+      <div class="hint">Stored with the story — never sent to any third party directly.</div>
+    </div>
+
+    <div class="grid" style="margin-bottom:14px">
+      <div class="f">
+        <label>Model</label>
+        <select id="model">
+          <option value="gpt-4o-mini">gpt-4o-mini</option>
+          <option value="gpt-4o">gpt-4o</option>
+          <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+        </select>
+      </div>
+      <div class="f">
+        <label>Welcome Text</label>
+        <input id="welcomeText" type="text" placeholder="Hello, I'm PerciBOT!" />
+      </div>
+    </div>
+
+    <div class="sys-toggle-wrap">
+      <button class="sys-tab active" id="tabDatasphere" type="button">🗄️ &nbsp;SAP Datasphere</button>
+      <button class="sys-tab sap-tab" id="tabSap" type="button">🔷 &nbsp;SAP System</button>
+    </div>
+
+    <div class="sys-panel active" id="panelDatasphere">
+      <div class="pairs-header">
+        <span class="pairs-label">View Pairs</span>
+        <button class="btn-add-pair" id="btnAddDsPair" type="button">Add pair</button>
+      </div>
+      <div class="pair-list" id="dsPairList"></div>
+      <div class="hint" style="margin-bottom:10px">
+        Each row is a Schema + View pair validated on Test Connection. Incomplete rows are ignored.
+      </div>
+    </div>
+
+    <div class="sys-panel" id="panelSap">
+      <div class="pairs-header">
+        <span class="pairs-label">SAP Tables</span>
+        <button class="btn-add-pair" id="btnAddSapPair" type="button">Add table</button>
+      </div>
+      <div class="pair-list" id="sapPairList"></div>
+      <div class="hint" style="margin-bottom:10px">
+        SAP table names to validate on Test Connection. SAP backend coming soon.
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:4px">
+      <button id="testConnBtn" class="btn-test primary" type="button">Test Connection</button>
+      <span id="connStatus" class="conn-status"></span>
+    </div>
+
+    <div id="connDetail" class="conn-detail" style="margin-top:10px"></div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="title">Prompts</div>
+    <div class="f" style="margin-bottom:12px">
+      <label>Client ID</label>
+      <input id="clientId" type="text" placeholder="e.g. smartstream, futuroot, demo-finance" />
+      <div class="hint">Identifier for the active client / demo context.</div>
+    </div>
+    <div class="f" style="margin-bottom:12px">
+      <label>User Prompt</label>
+      <textarea id="answerPrompt" class="prompt"></textarea>
+    </div>
+    <div class="f" style="margin-bottom:12px">
+      <label>System Prompt</label>
+      <textarea id="behaviourPrompt" class="prompt"></textarea>
+    </div>
+    <div class="f">
+      <label>Table Prompt</label>
+      <textarea id="schemaPrompt" class="prompt"></textarea>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="title">Memory</div>
+    <div class="toggle-row">
+      <label for="memoryEnabled">Enable Context Memory</label>
+      <input id="memoryEnabled" class="toggle" type="checkbox" />
+    </div>
+    <div id="memoryOptions" class="memory-options">
+      <div class="f" style="margin-bottom:8px">
+        <label>Memory Type</label>
+        <select id="memoryMode">
+          <option value="session">Session memory</option>
+          <option value="hana_db">HANA DB</option>
+        </select>
+      </div>
+      <div class="hint" id="memoryHint"></div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="title">Theme</div>
+    <div id="palettes" class="palettes" style="margin-bottom:12px"></div>
+    <div class="grid">
+      <div class="f"><label>Header Gradient Start</label><input id="primaryColor" type="color" /></div>
+      <div class="f"><label>Header Gradient End</label><input id="primaryDark" type="color" /></div>
+      <div class="f"><label>Background</label><input id="surfaceColor" type="color" /></div>
+      <div class="f"><label>Chat Panel Background</label><input id="surfaceAlt" type="color" /></div>
+      <div class="f"><label>Text Color</label><input id="textColor" type="color" /></div>
+    </div>
+    <div id="themeError" class="danger" style="margin-top:6px; display:none"></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="chip" id="statusChip">No changes</span>
+    <button id="resetBtn" type="button">Reset</button>
+    <button id="updateBtn" class="primary" disabled type="button">Update</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Saved</div>

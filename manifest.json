@@ -1,0 +1,12 @@
+{
+  "sap.app": {
+    "id": "com.percipere.sac.percibot",
+    "type": "component",
+    "i18n": "i18n/i18n.properties",
+    "title": "PerciBot SAC Custom Widget",
+    "description": "PerciBot SAC custom widget with chat, builder configuration, prompts, connection testing, and theming support",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  }
+}
