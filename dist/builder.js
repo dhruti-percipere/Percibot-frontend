@@ -185,13 +185,27 @@
         this._wire();
         this._renderPalettes();
         this._addDsPair();
+        if (this._pendingInitProps) {
+          this._apply(this._pendingInitProps);
+          if (!this._initial) this._initial = JSON.parse(JSON.stringify(this._snapshot()));
+          this._pendingInitProps = null;
+        }
       }
     }
     onCustomWidgetBuilderInit(host) {
-      this._apply(host && host.properties || {});
+      const props = host && host.properties || {};
+      if (!this.$) {
+        this._pendingInitProps = props;
+        return;
+      }
+      this._apply(props);
       if (!this._initial) this._initial = JSON.parse(JSON.stringify(this._snapshot()));
     }
     onCustomWidgetAfterUpdate(changedProps) {
+      if (!this.$) {
+        this._pendingInitProps = { ...this._pendingInitProps || {}, ...changedProps || {} };
+        return;
+      }
       this._apply(changedProps, true);
       if (!this._initial) this._initial = JSON.parse(JSON.stringify(this._snapshot()));
     }
