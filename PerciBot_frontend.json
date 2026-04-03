@@ -3,22 +3,22 @@
   "license": "",
   "vendor": "Percipere",
   "id": "com.percipere.sac.percibot.dev",
-  "version": "1.0.0",
-  "name": "PerciBOT_TC",
-  "newInstancePrefix": "PerciBOT_TC",
+  "version": "1.1.0",
+  "name": "PerciBOT_TataChemicals",
+  "newInstancePrefix": "PerciBOT_TataChemicals",
   "description": "PerciBot SAC custom widget with chat, builder configuration, prompts, connection testing, and theming support",
   "webcomponents": [
     {
       "kind": "main",
       "tag": "perci-bot",
-      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/chat-widget.js?v=110",
+      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/chat-widget.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "perci-bot-builder",
-      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/builder.js?v=110",
+      "url": "https://dhruti-percipere.github.io/Percibot-frontend/dist/builder.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
